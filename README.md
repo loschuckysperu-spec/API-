@@ -18,3 +18,7 @@ Este paquete contiene la conexión de MongoDB solicitada y funciona directamente
 ## Importante
 
 La conexión de MongoDB está incorporada porque se solicitó un paquete listo para desplegar. No publiques esta carpeta en un repositorio público.
+
+
+## Listo para Vercel
+Vercel instalará automáticamente las dependencias con `package.json`. Node configurado en 24.x.
