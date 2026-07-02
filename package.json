@@ -1,13 +1,14 @@
 {
-  "name": "api-datos-full-crud",
-  "version": "1.1.0",
+  "name": "panel-enlaces-sin-clave",
+  "version": "1.0.0",
   "private": true,
-  "description": "API CRUD con MongoDB y panel HTML para Vercel",
+  "description": "Panel HTML con API CRUD MongoDB listo para Vercel",
   "main": "api/datos.js",
   "engines": {
-    "node": "22.x"
+    "node": "20.x"
   },
   "scripts": {
+    "build": "echo \"Build listo: Vercel instala dependencias automaticamente\"",
     "start": "node api/datos.js",
     "check": "node --check api/datos.js"
   },

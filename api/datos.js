@@ -108,7 +108,10 @@ function validateId(id) {
   return mongoose.Types.ObjectId.isValid(id);
 }
 
-app.get('/datos', async (_req, res) => {
+// Rutas compatibles con Vercel: /datos y /api/datos
+const router = express.Router();
+
+router.get('/', async (_req, res) => {
   try {
     await connectDatabase();
     const enlaces = await Enlace.find().sort({ orden: 1, nombre: 1 }).lean();
@@ -119,7 +122,7 @@ app.get('/datos', async (_req, res) => {
   }
 });
 
-app.post('/datos', async (req, res) => {
+router.post('/', async (req, res) => {
   try {
     await connectDatabase();
     const datos = validatePayload(req.body);
@@ -137,7 +140,7 @@ app.post('/datos', async (req, res) => {
   }
 });
 
-app.put('/datos/:id', async (req, res) => {
+router.put('/:id', async (req, res) => {
   try {
     if (!validateId(req.params.id)) {
       return res.status(400).json({ error: 'El identificador no es válido.' });
@@ -161,7 +164,7 @@ app.put('/datos/:id', async (req, res) => {
   }
 });
 
-app.delete('/datos/:id', async (req, res) => {
+router.delete('/:id', async (req, res) => {
   try {
     if (!validateId(req.params.id)) {
       return res.status(400).json({ error: 'El identificador no es válido.' });
@@ -177,6 +180,9 @@ app.delete('/datos/:id', async (req, res) => {
     return res.status(500).json({ error: 'No se pudo eliminar el enlace.' });
   }
 });
+
+app.use('/datos', router);
+app.use('/api/datos', router);
 
 app.use((req, res) => {
   return res.status(404).json({ error: 'Ruta no encontrada.' });

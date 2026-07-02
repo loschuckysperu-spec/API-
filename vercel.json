@@ -2,17 +2,8 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "version": 2,
   "rewrites": [
-    {
-      "source": "/datos",
-      "destination": "/api/datos"
-    },
-    {
-      "source": "/datos/:path*",
-      "destination": "/api/datos"
-    },
-    {
-      "source": "/",
-      "destination": "/public/index.html"
-    }
+    { "source": "/datos", "destination": "/api/datos" },
+    { "source": "/datos/:path*", "destination": "/api/datos" },
+    { "source": "/", "destination": "/index.html" }
   ]
 }
