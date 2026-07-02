@@ -1,24 +1,9 @@
-# Panel de enlaces listo para desplegar
+# Panel de enlaces para Vercel
 
-Este paquete contiene la conexión de MongoDB solicitada y funciona directamente desde el panel.
+Listo para subir a GitHub/Vercel.
 
-## Despliegue en Vercel
-
-1. Descomprime el ZIP.
-2. Sube a Vercel la carpeta que contiene directamente `package.json`, `vercel.json`, `api` y `public`.
-3. Abre la URL del proyecto.
-4. Ya puedes agregar, editar y borrar enlaces directamente desde el panel.
-
-## Estructura
-
-- `api/datos.js`: API CRUD y conexión a MongoDB.
-- `public/index.html`: panel de enlaces.
-- `vercel.json`: rutas del proyecto.
-
-## Importante
-
-La conexión de MongoDB está incorporada porque se solicitó un paquete listo para desplegar. No publiques esta carpeta en un repositorio público.
-
-
-## Listo para Vercel
-Vercel instalará automáticamente las dependencias con `package.json`. Node configurado en 24.x.
+- Node 24.x configurado.
+- Sin package-lock para evitar errores de instalación en Vercel.
+- Vercel instala dependencias automáticamente.
+- API: `/api/datos` y `/datos`.
+- Página: `public/index.html`.

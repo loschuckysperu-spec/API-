@@ -1,5 +1,5 @@
 {
-  "name": "panel-enlaces-sin-clave",
+  "name": "panel-enlaces-vercel",
   "version": "1.0.0",
   "private": true,
   "description": "Panel HTML con API CRUD MongoDB listo para Vercel",
@@ -8,7 +8,7 @@
     "node": "24.x"
   },
   "scripts": {
-    "build": "echo \"Build listo: Vercel instala dependencias automaticamente\"",
+    "build": "echo \"Build listo para Vercel\"",
     "start": "node api/datos.js",
     "check": "node --check api/datos.js"
   },

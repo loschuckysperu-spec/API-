@@ -3,7 +3,6 @@
   "version": 2,
   "rewrites": [
     { "source": "/datos", "destination": "/api/datos" },
-    { "source": "/datos/:path*", "destination": "/api/datos" },
-    { "source": "/", "destination": "/index.html" }
+    { "source": "/datos/:path*", "destination": "/api/datos" }
   ]
 }
